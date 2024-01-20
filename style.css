@@ -4,17 +4,24 @@ body {
     font-family: Arial, sans-serif;
 }
 
+    /* Add this to your style.css */
 header {
-    background-image: url('your-photo.jpg'); /* Replace 'your-photo.jpg' with your actual photo */
+    background: url('SF Boats and Fog.jpg') no-repeat center center;
     background-size: cover;
-    color: white;
-    text-align: center;
-    padding: 100px 0;
+    height: 100vh; /* This will make the image take the full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: white; /* Adjust text color as needed to contrast with your image */
 }
 
 header h1 {
-    margin: 0;
+    margin-top: 10%; /* Adjust this value to position the text in the top quarter */
     font-size: 3em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* This adds a shadow to the text for better readability */
+}
+
 }
 
 nav ul {
