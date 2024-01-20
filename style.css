@@ -4,7 +4,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-    /* Add this to your style.css */
 header {
     background: url('SF Boats and Fog.jpg') no-repeat center center;
     background-size: cover;
@@ -14,14 +13,13 @@ header {
     justify-content: flex-start;
     align-items: center;
     color: white; /* Adjust text color as needed to contrast with your image */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* This adds a shadow to the text for better readability */
 }
 
 header h1 {
     margin-top: 10%; /* Adjust this value to position the text in the top quarter */
     font-size: 3em;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* This adds a shadow to the text for better readability */
-}
-
+    /* No closing brace needed here */
 }
 
 nav ul {
