@@ -1,0 +1,17 @@
+<!-- Save this as street.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Street Photography - John Thomas Fallon</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1><strong>Street Photography</strong></h1>
+    </header>
+    <!-- Content for Street Photography goes here -->
+    <footer>
+        <a href="index.html">Back to Home</a>
+    </footer>
+</body>
+</html>
