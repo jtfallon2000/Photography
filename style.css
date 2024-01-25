@@ -24,36 +24,52 @@ header h1 {
 
 .main-image {
     width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 20px; /* Adjust as needed for space below the image */
+    display: block; /* This ensures there's no extra space around the image */
 }
 
 .thumbnails {
+    display: flex;
     justify-content: space-between;
-    margin: 0 10px; /* Adjust the margin for spacing from the screen edges */
+    margin: 0 auto; /* Center the thumbnails container */
 }
 
-.thumbnails a {
-    width: 32%; /* 3 images with a little space in between */
-    margin: 0 1%; /* Adjust for spacing between thumbnails */
+.thumbnail {
+    width: 32.3%; /* Each image takes up roughly a third of the container width */
+    margin: 0 0.5%; /* Small margin for spacing */
+    overflow: hidden; /* This will crop the images to fit the div */
 }
 
-.thumbnails img {
+.thumbnail-image {
     width: 100%;
-    height: auto;
+    height: auto; /* Keep the original aspect ratio */
     display: block;
+    transition: transform .3s ease; /* For a zoom effect on hover */
+}
+
+.thumbnail-image:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Ensure thumbnails are square */
+.thumbnail {
+    position: relative;
+    padding-top: 32.3%; /* Same as width to maintain aspect ratio */
+}
+
+.thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
 }
 
 /* Responsive adjustments */
-@media (max-width: 600px) {
-    .thumbnails a {
-        width: 100%;
-        margin-bottom: 20px;
-    }
+@media (max-width: 800px) {
     .thumbnails {
         flex-direction: column;
     }
+    .thumbnail {
+        width: 100%; /* Each thumbnail takes full width on smaller screens */
+        padding-top: 100%; /* Adjust padding-top to maintain square shape */
+    }
 }
-
-/* Additional aesthetic improvements can be made as necessary */
