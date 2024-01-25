@@ -1,57 +1,36 @@
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-}
-
-.main-image {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 60vh;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-.main-image h1 {
-    color: white;
     text-align: center;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-    margin-bottom: 20px;
 }
 
-.button-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px auto;
-    max-width: 1200px; /* Adjust the max-width to suit your design */
+header h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
-.image-button {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 32%;
-    height: 200px; /* Adjust the height as needed */
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+.gallery {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.gallery-item {
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2em;
+    color: black;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .button-container {
-        flex-direction: column;
-    }
-    .image-button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
+.gallery-item img {
+    width: 30%;
+    height: auto;
+}
+
+.gallery-item p {
+    margin-top: 5px;
 }
