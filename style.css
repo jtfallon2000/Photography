@@ -5,64 +5,54 @@ body {
     background: #f0f0f0;
 }
 
-.header {
+header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
     text-align: center;
 }
 
-.header h1 {
+header h1 {
     font-size: 2em;
     margin: 0;
 }
 
-.main-image img {
+.image-row {
+    display: flex;
+    justify-content: center;
+}
+
+.main-image {
     width: 100%;
     height: auto;
     display: block;
     margin-bottom: 20px; /* Adjust as needed for space below the image */
 }
 
-.button-container {
-    display: flex;
+.thumbnails {
     justify-content: space-between;
     margin: 0 10px; /* Adjust the margin for spacing from the screen edges */
 }
 
-.image-button {
+.thumbnails a {
     width: 32%; /* 3 images with a little space in between */
-    display: inline-block;
-    position: relative;
-    color: #fff;
-    text-align: center;
+    margin: 0 1%; /* Adjust for spacing between thumbnails */
 }
 
-.image-button img {
+.thumbnails img {
     width: 100%;
     height: auto;
     display: block;
-    background: #333;
-}
-
-.button-label {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.5); /* semi-transparent overlay for text */
-    color: #fff;
-    padding: 5px 0;
 }
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
-    .button-container {
-        flex-direction: column;
-    }
-    .image-button {
+    .thumbnails a {
         width: 100%;
         margin-bottom: 20px;
+    }
+    .thumbnails {
+        flex-direction: column;
     }
 }
 
