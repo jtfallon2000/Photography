@@ -9,6 +9,7 @@ body {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
+    text-align: center;
 }
 
 .header h1 {
@@ -16,46 +17,53 @@ body {
     margin: 0;
 }
 
-.main-image {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background: #fff;
-    padding: 20px 0;
-}
-
 .main-image img {
-    max-width: 100%;
-    max-height: 300px;
-    display: block; /* This will prevent inline default spacing */
-}
-
-.gallery {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    flex-wrap: wrap;
-}
-
-.gallery a {
-    display: block;
-    width: 30%; /* fallback for older browsers */
-    width: calc(33.333% - 40px); /* three images with 20px gap */
-    margin: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: box-shadow 0.3s ease-in-out;
-}
-
-.gallery img {
     width: 100%;
     height: auto;
-    aspect-ratio: 1 / 1; /* makes the image square */
-    object-fit: cover; /* ensures the image covers the area without distortion */
+    display: block;
+    margin-bottom: 20px; /* Adjust as needed for space below the image */
 }
 
-.gallery a:hover {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px; /* Adjust the margin for spacing from the screen edges */
 }
 
-/* Responsive adjustments can be added as needed */
+.image-button {
+    width: 32%; /* 3 images with a little space in between */
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    text-align: center;
+}
+
+.image-button img {
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #333;
+}
+
+.button-label {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5); /* semi-transparent overlay for text */
+    color: #fff;
+    padding: 5px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .button-container {
+        flex-direction: column;
+    }
+    .image-button {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Additional aesthetic improvements can be made as necessary */
