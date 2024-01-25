@@ -7,40 +7,45 @@ body {
 header {
     background: url('SF Boats and Fog.jpg') no-repeat center center;
     background-size: cover;
-    height: 100vh; /* This will make the image take the full viewport height */
+    height: 100vh; /* Adjust if you want a different height */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    color: white; /* Adjust text color as needed to contrast with your image */
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* This adds a shadow to the text for better readability */
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 header h1 {
-    margin-top: 10%; /* Adjust this value to position the text in the top quarter */
     font-size: 3em;
-    /* No closing brace needed here */
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-    background-color: #333;
     margin: 0;
+    padding: 20px;
 }
 
-nav ul li {
-    display: inline;
+.image-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* White space between buttons */
+    padding: 20px 0;
+    background-color: white;
 }
 
-nav ul li a {
+.image-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-decoration: none;
-    color: white;
-    padding: 15px 30px;
-    display: inline-block;
+    color: black; /* Text color */
 }
 
-nav ul li a:hover {
-    background-color: #777;
+.image-button img {
+    max-width: 100%; /* Ensures image is responsive */
+    display: block; /* Removes bottom space under the image */
+    margin-bottom: 8px; /* Space between image and text */
+}
+
+.image-button span {
+    display: block;
+    text-align: center;
 }
