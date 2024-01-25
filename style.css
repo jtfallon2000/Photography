@@ -4,53 +4,54 @@ body {
     font-family: Arial, sans-serif;
 }
 
-header {
+.main-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.main-image h1 {
+    color: white;
     text-align: center;
-    padding: 20px 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    color: #333; /* Professional dark grey color */
-}
-
-.photo-banner img {
-    display: block; /* Remove any extra space beneath the image */
-    width: 100%; /* Full width */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 20px; /* White space below the image */
-}
-
-.image-buttons {
+.button-container {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Buffer of white space between images */
-    padding: 0 10px; /* Padding on the sides */
+    gap: 10px;
+    margin: 20px auto;
+    max-width: 1200px; /* Adjust the max-width to suit your design */
 }
 
 .image-button {
-    flex: 1; /* Each button will take up equal space */
-    max-width: calc(33.333% - 20px); /* Subtracting the total gap from the width */
-    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 32%;
+    height: 200px; /* Adjust the height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
-.image-button img {
-    width: 100%; /* Ensure the image fills the button */
-    height: auto;
-    display: block; /* This ensures no extra space below the image */
-    transition: transform 0.3s ease; /* Smooth transform effect for hover */
-}
-
-.image-button:hover img {
-    transform: scale(1.05); /* Slight zoom on hover */
-}
-
+/* Responsive adjustments */
 @media (max-width: 768px) {
-    .image-buttons {
-        flex-direction: column; /* Stack buttons vertically on smaller screens */
+    .button-container {
+        flex-direction: column;
     }
-    .image-button:not(:last-child) {
-        margin-bottom: 10px; /* Space between stacked buttons */
+    .image-button {
+        width: 100%;
+        margin-bottom: 10px;
     }
 }
