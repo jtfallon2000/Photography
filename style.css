@@ -2,12 +2,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    background-color: white; /* Ensure background color is white for white space */
 }
 
 header {
     background: url('SF Boats and Fog.jpg') no-repeat center center;
     background-size: cover;
-    height: 100vh; /* Adjust if you want a different height */
+    height: 50vh; /* Adjust the height to fit the screen */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,34 +19,50 @@ header {
 }
 
 header h1 {
-    font-size: 3em;
-    margin: 0;
-    padding: 20px;
+    font-size: 2em; /* Adjust the font size if necessary */
+    padding: 0.5em;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better visibility */
 }
 
 .image-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: space-around; /* Distribute space evenly */
+    flex-wrap: wrap; /* Wrap items to the next line if not enough space */
     gap: 10px; /* White space between buttons */
-    padding: 20px 0;
-    background-color: white;
+    padding: 10px 0; /* Padding above and below the image buttons */
 }
 
 .image-button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: black; /* Text color */
+    flex-basis: calc(33.333% - 20px); /* Three items per row, minus the gap */
+    margin: 10px; /* Margin around items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: adds shadow for depth */
+    text-align: center; /* Center the text below the image */
 }
 
 .image-button img {
-    max-width: 100%; /* Ensures image is responsive */
+    width: 100%; /* Make image fill the container */
+    height: auto; /* Maintain aspect ratio */
     display: block; /* Removes bottom space under the image */
-    margin-bottom: 8px; /* Space between image and text */
 }
 
 .image-button span {
     display: block;
-    text-align: center;
+    padding: 5px 0; /* Padding for the text */
+    background: white; /* Background color for the text */
+    text-decoration: none;
+    color: black; /* Text color */
+}
+
+/* Ensure the images scale down on smaller screens */
+@media (max-width: 600px) {
+    .image-button {
+        flex-basis: calc(50% - 20px); /* Two items per row on small screens */
+    }
+}
+
+/* Even smaller, one item per row */
+@media (max-width: 400px) {
+    .image-button {
+        flex-basis: 100%; /* Full width for very small screens */
+    }
 }
