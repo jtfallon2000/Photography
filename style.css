@@ -2,66 +2,55 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: white; /* Ensures background color is white */
 }
 
 header {
-    background: url('SF Boats and Fog.jpg') no-repeat center center;
-    background-size: cover;
-    height: 50vh; /* Adjust as needed */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 20px 0;
 }
 
 header h1 {
-    font-size: 2em; /* Adjust font size as necessary */
-    padding: 0.5em;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
+    margin: 0;
+    font-size: 2.5em;
+    color: #333; /* Professional dark grey color */
+}
+
+.photo-banner img {
+    display: block; /* Remove any extra space beneath the image */
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* White space below the image */
 }
 
 .image-buttons {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 10px; /* White space between buttons */
-    padding: 10px 0; /* Padding above and below image buttons */
+    justify-content: center;
+    gap: 10px; /* Buffer of white space between images */
+    padding: 0 10px; /* Padding on the sides */
 }
 
 .image-button {
-    flex-basis: calc(33.333% - 20px); /* Three items per row */
-    margin: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
-    text-align: center;
+    flex: 1; /* Each button will take up equal space */
+    max-width: calc(33.333% - 20px); /* Subtracting the total gap from the width */
+    box-sizing: border-box;
 }
 
 .image-button img {
-    width: 100%; /* Make image fill container */
-    height: auto; /* Maintain aspect ratio */
-    display: block;
+    width: 100%; /* Ensure the image fills the button */
+    height: auto;
+    display: block; /* This ensures no extra space below the image */
+    transition: transform 0.3s ease; /* Smooth transform effect for hover */
 }
 
-.image-button span {
-    display: block;
-    padding: 5px 0; /* Padding for text */
-    background: white; /* Background color for text */
-    text-decoration: none;
-    color: black; /* Text color */
+.image-button:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
 }
 
-/* Responsive design adjustments */
-@media (max-width: 600px) {
-    .image-button {
-        flex-basis: calc(50% - 20px); /* Two items per row for small screens */
+@media (max-width: 768px) {
+    .image-buttons {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
     }
-}
-
-@media (max-width: 400px) {
-    .image-button {
-        flex-basis: 100%; /* One item per row for very small screens */
+    .image-button:not(:last-child) {
+        margin-bottom: 10px; /* Space between stacked buttons */
     }
 }
