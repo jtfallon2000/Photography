@@ -2,13 +2,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: white; /* Ensure background color is white for white space */
+    background-color: white; /* Ensures background color is white */
 }
 
 header {
     background: url('SF Boats and Fog.jpg') no-repeat center center;
     background-size: cover;
-    height: 50vh; /* Adjust the height to fit the screen */
+    height: 50vh; /* Adjust as needed */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,50 +19,49 @@ header {
 }
 
 header h1 {
-    font-size: 2em; /* Adjust the font size if necessary */
+    font-size: 2em; /* Adjust font size as necessary */
     padding: 0.5em;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better visibility */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text */
 }
 
 .image-buttons {
     display: flex;
-    justify-content: space-around; /* Distribute space evenly */
-    flex-wrap: wrap; /* Wrap items to the next line if not enough space */
+    justify-content: space-around;
+    flex-wrap: wrap;
     gap: 10px; /* White space between buttons */
-    padding: 10px 0; /* Padding above and below the image buttons */
+    padding: 10px 0; /* Padding above and below image buttons */
 }
 
 .image-button {
-    flex-basis: calc(33.333% - 20px); /* Three items per row, minus the gap */
-    margin: 10px; /* Margin around items */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: adds shadow for depth */
-    text-align: center; /* Center the text below the image */
+    flex-basis: calc(33.333% - 20px); /* Three items per row */
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    text-align: center;
 }
 
 .image-button img {
-    width: 100%; /* Make image fill the container */
+    width: 100%; /* Make image fill container */
     height: auto; /* Maintain aspect ratio */
-    display: block; /* Removes bottom space under the image */
+    display: block;
 }
 
 .image-button span {
     display: block;
-    padding: 5px 0; /* Padding for the text */
-    background: white; /* Background color for the text */
+    padding: 5px 0; /* Padding for text */
+    background: white; /* Background color for text */
     text-decoration: none;
     color: black; /* Text color */
 }
 
-/* Ensure the images scale down on smaller screens */
+/* Responsive design adjustments */
 @media (max-width: 600px) {
     .image-button {
-        flex-basis: calc(50% - 20px); /* Two items per row on small screens */
+        flex-basis: calc(50% - 20px); /* Two items per row for small screens */
     }
 }
 
-/* Even smaller, one item per row */
 @media (max-width: 400px) {
     .image-button {
-        flex-basis: 100%; /* Full width for very small screens */
+        flex-basis: 100%; /* One item per row for very small screens */
     }
 }
