@@ -6,9 +6,6 @@
     <meta name="description" content="John Thomas Fallon Photography - Capturing Moments in Stunning Photography">
     <title>John Thomas Fallon Photography</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
@@ -67,130 +64,58 @@
             background-color: #555;
         }
 
-        /* Image Carousel Styles */
-        .image-carousel {
-            text-align: center;
-        }
-
-        .slick-carousel {
-            display: flex;
-            flex-wrap: nowrap;
-            overflow: hidden;
-        }
-
-        .slick-item {
-            width: 80%;
-            max-width: 300px;
-            margin: 0 auto;
-        }
-
-        .slick-item img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        /* White background for Lightbox */
-        .lb-backdrop, .lb-dataContainer {
-            background-color: white !important; /* White background with !important to override Lightbox styles */
-        }
-
-        /* Social Icons */
-        .social-icons {
-            font-size: 20px;
-            margin-top: 10px;
-        }
-
-        .social-icons a {
-            color: #fff;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-
-        /* Responsive Design */
-        /* Add responsive styles for various screen sizes here */
-        @media screen and (max-width: 768px) {
-            .common-section {
-                padding: 0 10px; /* Adjust padding for smaller screens */
-            }
-
-            .contact-form input, .contact-form textarea {
-                padding: 8px;
-            }
-
-            .contact-form button {
-                padding: 8px 16px;
-            }
-
-            .slick-item {
-                width: 100%; /* Take up full width on smaller screens */
-            }
-
-            .slick-carousel {
-                justify-content: center;
-            }
-
-            .social-icons {
-                font-size: 16px;
-            }
-        }
-
-        /* Analytics and Feedback */
-        /* Add styles for analytics and feedback tools here */
-        .analytics-feedback {
-            background-color: #f5f5f5;
+        /* Image Gallery Styles */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
             padding: 20px;
-            text-align: center;
-            font-size: 18px;
-            color: #333;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .menu li {
+                display: block;
+                text-align: center;
+                margin: 10px 0;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>John Thomas Fallon Photography</h1>
-        <!-- Add Instagram icon linked to the Instagram account -->
-        <div class="social-icons">
-            <a href="https://www.instagram.com/stuffitook"><i class="fab fa-instagram"></i></a>
-        </div>
     </header>
 
-    <!-- Image Carousel Section -->
-    <section class="common-section image-carousel-section">
+    <!-- Image Gallery Section -->
+    <section class="common-section image-gallery-section">
         <div class="container">
-            <div class="image-carousel">
-                <div class="slick-carousel">
-                    <!-- Include all your images here -->
-                    <div class="slick-item">
-                        <img src="Hudson Church.png" alt="Hudson Church">
-                    </div>
-                    <div class="slick-item">
-                        <img src="Palm Springs Juxt.jpg" alt="Palm Springs Juxt">
-                    </div>
-                    <div class="slick-item">
-                        <img src="Pidgeon Chilgeon.jpg" alt="Pidgeon Chilgeon">
-                    </div>
-                    <div class="slick-item">
-                        <img src="SF Boats and Fog.png" alt="SF Boats and Fog">
-                    </div>
-                    <div class="slick-item">
-                        <img src="See Spot Run.png" alt="See Spot Run">
-                    </div>
-                    <div class="slick-item">
-                        <img src="Shapes and Shadows.jpg" alt="Shapes and Shadows">
-                    </div>
-                    <div class="slick-item">
-                        <img src="Smoke Break.png" alt="Smoke Break">
-                    </div>
-                    <div class="slick-item">
-                        <img src="Somewhere Out West.png" alt="Somewhere Out West">
-                    </div>
-                    <!-- Add more images as needed -->
-                </div>
+            <div class="image-gallery">
+                <!-- Images from GitHub repository -->
+                <div><img src="Hudson Church.png" alt="Hudson Church" class="gallery-image"></div>
+                <div><img src="Palm Springs Juxt.jpg" alt="Palm Springs Juxtaposition" class="gallery-image"></div>
+                <div><img src="Pidgeon Chilgeon.jpg" alt="Pidgeon Chilgeon" class="gallery-image"></div>
+                <div><img src="SF Boats and Fog.png" alt="SF Boats and Fog" class="gallery-image"></div>
+                <div><img src="See Spot Run.png" alt="See Spot Run" class="gallery-image"></div>
+                <div><img src="Shapes and Shadows.jpg" alt="Shapes and Shadows" class="gallery-image"></div>
+                <div><img src="Smoke Break.png" alt="Smoke Break" class="gallery-image"></div>
+                <div><img src="Somewhere Out West.png" alt="Somewhere Out West" class="gallery-image"></div>
+                <!-- Add more images as needed -->
             </div>
         </div>
     </section>
 
-    <!-- Contact Form with CSS animations and real-time validation feedback -->
     <section class="common-section contact-section">
         <div class="container">
             <form class="contact-form" id="contact-form">
@@ -202,90 +127,25 @@
         </div>
     </section>
 
-    <!-- User Engagement Features -->
-    <section class="common-section user-engagement-section">
-        <div class="container">
-            <!-- ... (your existing user engagement content) ... -->
-        </div>
-    </section>
-
-    <!-- Add social media sharing buttons to images and include a live Instagram feed -->
-    <section class="common-section social-share-section">
-        <div class="container">
-            <!-- ... (your existing social sharing content) ... -->
-        </div>
-    </section>
-
-    <!-- Gamify the Website with a photography quiz and a monthly photo contest -->
-    <section class="common-section gamify-section">
-        <div class="container">
-            <!-- ... (your existing gamify content) ... -->
-        </div>
-    </section>
-
-    <!-- Personalize User Experience with a user login system and a newsletter signup option -->
-    <section class="common-section user-experience-section">
-        <div class="container">
-            <!-- ... (your existing user experience content) ... -->
-        </div>
-    </section>
-
-    <!-- Responsive Design -->
-    <style>
-        /* Add responsive styles for various screen sizes here */
-        @media screen and (max-width: 768px) {
-            .common-section {
-                padding: 0 10px; /* Adjust padding for smaller screens */
-            }
-
-            .contact-form input, .contact-form textarea {
-                padding: 8px;
-            }
-
-            .contact-form button {
-                padding: 8px 16px;
-            }
-
-            .slick-item {
-                width: 100%; /* Take up full width on smaller screens */
-            }
-
-            .slick-carousel {
-                justify-content: center;
-            }
-
-            .social-icons {
-                font-size: 16px;
-            }
-        }
-    </style>
-
-    <!-- Analytics and Feedback -->
-    <section class="analytics-feedback">
-        <!-- Add analytics and feedback content here -->
-        This is a placeholder for analytics and feedback tools.
-    </section>
-
-    <!-- Initialize Slick Carousel -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
-        $(document).ready(function() {
-            $('.slick-carousel').slick({
-                centerMode: true,
-                centerPadding: '0',
-                slidesToShow: 3,
-                dots: true,
-                responsive: [
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            centerMode: false,
-                            slidesToShow: 1
-                        }
-                    }
-                ]
-            });
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill out all fields.");
+                event.preventDefault();
+            } else if (!validateEmail(email)) {
+                alert("Please enter a valid email address.");
+                event.preventDefault();
+            }
         });
+
+        function validateEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
     </script>
 </body>
 </html>
