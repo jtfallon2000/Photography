@@ -96,13 +96,8 @@
         }
 
         /* White background for Lightbox */
-        .lb-backdrop {
-            background-color: rgba(255, 255, 255, 0.95); /* White background with some transparency */
-        }
-
-        .lb-container {
-            background-color: transparent; /* Remove default background color */
-            box-shadow: none; /* Remove default shadow */
+        .lb-backdrop, .lb-dataContainer {
+            background-color: white !important; /* White background with !important to override Lightbox styles */
         }
 
         /* Social Icons */
