@@ -9,7 +9,7 @@
     <style>
         /* Importing Google Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-        
+
         /* Reset and body styles */
         body {
             font-family: 'Roboto', sans-serif;
@@ -36,7 +36,7 @@
         }
 
         /* Common section styles */
-        .about-section, .services-section, .contact-section, .testimonials-section, .blog-section {
+        .common-section {
             margin-bottom: 40px;
             padding: 0 20px;
         }
@@ -47,11 +47,6 @@
             border-radius: 50%;
             margin: 20px auto;
             display: block;
-        }
-
-        /* Service item styles */
-        .service-item {
-            margin-bottom: 20px;
         }
 
         /* Form input styles */
@@ -172,36 +167,29 @@
 </head>
 <body>
     <header>
-        <!-- Add your logo or site title here -->
         <h1>John Thomas Fallon Photography</h1>
-        <!-- Add navigation links if desired -->
         <nav>
             <ul class="menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Portfolio</a></li>
                 <li><a href="#">Services</a></li>
                 <li><a href="#">Contact</a></li>
-                <!-- Add more menu items as needed -->
             </ul>
         </nav>
     </header>
 
-    <section class="about-section">
+    <section class="common-section about-section">
         <div class="container">
             <h2 class="section-title">About Me</h2>
-            <!-- Add your about me content here -->
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
             <img src="profile.jpg" alt="John Thomas Fallon" class="profile-picture">
         </div>
     </section>
 
-    <!-- Add more sections like services, contact, testimonials, and blog as needed -->
-
-    <section class="contact-section">
+    <section class="common-section contact-section">
         <div class="container">
             <h2 class="section-title">Contact Me</h2>
             <form class="contact-form" id="contact-form">
-                <!-- Add form fields for name, email, message, etc. -->
                 <input type="text" name="name" id="name" placeholder="Your Name" required>
                 <input type="email" name="email" id="email" placeholder="Your Email" required>
                 <textarea name="message" id="message" placeholder="Your Message" required></textarea>
@@ -211,7 +199,6 @@
     </section>
 
     <script>
-        // JavaScript for form validation
         document.getElementById("contact-form").addEventListener("submit", function(event) {
             const name = document.getElementById("name").value.trim();
             const email = document.getElementById("email").value.trim();
@@ -219,14 +206,13 @@
 
             if (name === "" || email === "" || message === "") {
                 alert("Please fill out all fields.");
-                event.preventDefault(); // Prevent form submission
+                event.preventDefault();
             } else if (!validateEmail(email)) {
                 alert("Please enter a valid email address.");
-                event.preventDefault(); // Prevent form submission
+                event.preventDefault();
             }
         });
 
-        // Function to validate email format
         function validateEmail(email) {
             const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return regex.test(email);
