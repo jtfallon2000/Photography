@@ -10,38 +10,140 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <style>
-        /* Add custom CSS styles for square images */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--bg-color, #fafafa);
+            color: var(--text-color, #333);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--header-bg-color, #333);
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .common-section {
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+
+        .profile-picture {
+            max-width: 150px;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-form button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #555;
+        }
+
+        /* Updated styles for the image carousel */
+        .image-carousel {
+            text-align: center;
+        }
+
+        .slick-carousel {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow: hidden;
+        }
+
         .slick-item {
-            width: 200px; /* Set a fixed width for square images */
-            height: 200px; /* Set a fixed height to maintain a 1x1 aspect ratio */
+            width: 300px; /* Set a fixed width */
+            height: 300px; /* Set a fixed height to maintain a 1x1 aspect ratio */
             margin: 0 auto;
         }
-        /* Add custom styles for the image overlay */
-        .image-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.6);
+
+        .slick-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            border-radius: 10px; /* Rounded corners for the images */
+        }
+
+        /* White background for Lightbox */
+        .lb-backdrop, .lb-dataContainer {
+            background-color: white !important; /* White background with !important to override Lightbox styles */
+        }
+
+        /* Social Icons */
+        .social-icons {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .social-icons a {
             color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .slick-item:hover .image-overlay {
-            opacity: 1;
-        }
-        .image-overlay a {
+            margin: 0 10px;
             text-decoration: none;
-            color: #fff;
-            font-size: 24px;
-            transition: transform 0.3s ease;
         }
-        .image-overlay a:hover {
-            transform: scale(1.2);
+
+        /* Responsive Design */
+        /* Add responsive styles for various screen sizes here */
+        @media screen and (max-width: 768px) {
+            .common-section {
+                padding: 0 10px; /* Adjust padding for smaller screens */
+            }
+
+            .contact-form input, .contact-form textarea {
+                padding: 8px;
+            }
+
+            .contact-form button {
+                padding: 8px 16px;
+            }
+
+            .slick-item {
+                width: 100%; /* Take up full width on smaller screens */
+            }
+
+            .slick-carousel {
+                justify-content: center;
+            }
+
+            .social-icons {
+                font-size: 16px;
+            }
+        }
+
+        /* Analytics and Feedback */
+        /* Add styles for analytics and feedback tools here */
+        .analytics-feedback {
+            background-color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            color: #333;
         }
     </style>
 </head>
@@ -59,20 +161,94 @@
         <div class="container">
             <div class="image-carousel">
                 <div class="slick-carousel">
-                    <!-- Include all your images here with square dimensions -->
+                    <!-- Include all your images here -->
                     <div class="slick-item">
-                        <img src="Abstract_Bridge_Shapes.jpg" alt="Abstract Bridge Shapes">
-                        <div class="image-overlay">
-                            <a href="Abstract_Bridge_Shapes.jpg" class="image-zoom"><i class="fas fa-search-plus"></i></a>
-                        </div>
+                        <img src="Abstract Bridge Shapes.png" alt="Abstract Bridge Shapes">
                     </div>
                     <div class="slick-item">
-                        <img src="Abstract_Lane.jpg" alt="Abstract Lane">
-                        <div class="image-overlay">
-                            <a href="Abstract_Lane.jpg" class="image-zoom"><i class="fas fa-search-plus"></i></a>
-                        </div>
+                        <img src="Abstract Lane.png" alt="Abstract Lane">
                     </div>
-                    <!-- Add more images with similar markup -->
+                    <div class="slick-item">
+                        <img src="Abstract Window Shadows.png" alt="Abstract Window Shadows">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Abstract Zakim.png" alt="Abstract Zakim">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Bay Surf.png" alt="Bay Surf">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Desert Nights.png" alt="Desert Nights">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Dog Activity.png" alt="Dog Activity">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Great Wave.png" alt="Great Wave">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Hazy Boston.png" alt="Hazy Boston">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Hudson Church.png" alt="Hudson Church">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Melancholia.png" alt="Melancholia">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Midnight Terrain.png" alt="Midnight Terrain">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Mira View.png" alt="Mira View">
+                    </div>
+                    <div class="slick-item">
+                        <img src="NYC Inbound.png" alt="NYC Inbound">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Neighbors.png" alt="Neighbors">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Old Man and Sea.png" alt="Old Man and Sea">
+                    </div>
+                    <div class="slick-item">
+                        <img src="PCH.png" alt="PCH">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Palm Springs Juxt.jpg" alt="Palm Springs Juxt">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Pidgeon Chilgeon.jpg" alt="Pidgeon Chilgeon">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Reflecting Pool.png" alt="Reflecting Pool">
+                    </div>
+                    <div class="slick-item">
+                        <img src="SF Boats and Fog.png" alt="SF Boats and Fog">
+                    </div>
+                    <div class="slick-item">
+                        <img src="SF Campus View.png" alt="SF Campus View">
+                    </div>
+                    <div class="slick-item">
+                        <img src="See Spot Run.png" alt="See Spot Run">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Selfie.png" alt="Selfie">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Shapes and Shadows.jpg" alt="Shapes and Shadows">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Smoke Break.png" alt="Smoke Break">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Somewhere Out West.png" alt="Somewhere Out West">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Sweet Light.png" alt="Sweet Light">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Yerba Buena Man.png" alt="Yerba Buena Man">
+                    </div>
                 </div>
             </div>
         </div>
@@ -93,28 +269,28 @@
     <!-- User Engagement Features -->
     <section class="common-section user-engagement-section">
         <div class="container">
-            <!-- Add user engagement content such as testimonials, client reviews, etc. -->
+            <!-- ... (your existing user engagement content) ... -->
         </div>
     </section>
 
     <!-- Add social media sharing buttons to images and include a live Instagram feed -->
     <section class="common-section social-share-section">
         <div class="container">
-            <!-- Add social sharing buttons and Instagram feed here -->
+            <!-- ... (your existing social sharing content) ... -->
         </div>
     </section>
 
     <!-- Gamify the Website with a photography quiz and a monthly photo contest -->
     <section class="common-section gamify-section">
         <div class="container">
-            <!-- Add gamification content like a photography quiz and contests here -->
+            <!-- ... (your existing gamify content) ... -->
         </div>
     </section>
 
     <!-- Personalize User Experience with a user login system and a newsletter signup option -->
     <section class="common-section user-experience-section">
         <div class="container">
-            <!-- Add user login and newsletter signup options here -->
+            <!-- ... (your existing user experience content) ... -->
         </div>
     </section>
 
@@ -161,6 +337,7 @@
             $('.slick-carousel').slick({
                 centerMode: true,
                 centerPadding: '0',
+                slidesToShow: 3,
                 dots: true,
                 responsive: [
                     {
