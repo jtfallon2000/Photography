@@ -7,10 +7,8 @@
     <title>John Thomas Fallon Photography</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
-        /* Importing Google Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-        /* Reset and body styles */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
@@ -18,10 +16,8 @@
             background: var(--bg-color, #fafafa);
             color: var(--text-color, #333);
             line-height: 1.6;
-            transition: background-color 0.3s, color 0.3s;
         }
 
-        /* Header styles */
         header {
             background-color: var(--header-bg-color, #333);
             color: #fff;
@@ -29,19 +25,16 @@
             text-align: center;
         }
 
-        /* Section title styles */
         .section-title {
             font-weight: 700;
             margin-bottom: 1rem;
         }
 
-        /* Common section styles */
         .common-section {
             margin-bottom: 40px;
             padding: 0 20px;
         }
 
-        /* Profile picture styles */
         .profile-picture {
             max-width: 150px;
             border-radius: 50%;
@@ -49,7 +42,6 @@
             display: block;
         }
 
-        /* Form input styles */
         .contact-form input, .contact-form textarea {
             width: 100%;
             padding: 10px;
@@ -58,7 +50,6 @@
             border: 1px solid #ccc;
         }
 
-        /* Button styles */
         .contact-form button {
             background-color: #333;
             color: #fff;
@@ -69,99 +60,36 @@
             transition: background-color 0.3s ease;
         }
 
-        /* Button hover state */
         .contact-form button:hover {
             background-color: #555;
         }
 
-        /* Blog post styles */
-        .blog-post {
-            margin-bottom: 20px;
+        /* Image Gallery Styles */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
         }
 
-        /* Blog image styles */
-        .blog-image {
-            max-width: 100%;
+        .gallery-image {
+            width: 100%;
             height: auto;
-            margin: 20px 0;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
         }
 
-        /* Responsive design for smaller screens */
+        .gallery-image:hover {
+            transform: scale(1.05);
+            cursor: pointer;
+        }
+
         @media (max-width: 768px) {
             .menu li {
                 display: block;
                 text-align: center;
                 margin: 10px 0;
             }
-
-            .image-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            }
-        }
-
-        /* Light/dark mode switch styles */
-        .theme-switch-wrapper {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1em;
-            justify-content: center; /* Center the switch */
-        }
-
-        .theme-switch {
-            display: inline-block;
-            height: 34px;
-            position: relative;
-            width: 60px;
-        }
-
-        .theme-switch input {
-            display: none;
-        }
-
-        .slider {
-            background-color: #ccc;
-            bottom: 0;
-            cursor: pointer;
-            left: 0;
-            position: absolute;
-            right: 0;
-            top: 0;
-            transition: .4s;
-        }
-
-        .slider:before {
-            background-color: #fff;
-            bottom: 4px;
-            content: "";
-            height: 26px;
-            left: 4px;
-            position: absolute;
-            transition: .4s;
-            width: 26px;
-        }
-
-        input:checked + .slider {
-            background-color: #66bb6a;
-        }
-
-        input:checked + .slider:before {
-            transform: translateX(26px);
-        }
-
-        .slider.round {
-            border-radius: 34px;
-        }
-
-        .slider.round:before {
-            border-radius: 50%;
-        }
-
-        /* Light and dark color variables */
-        :root {
-            --bg-color: #fafafa;
-            --text-color: #333;
-            --header-bg-color: #333;
-            /* Add more variables as needed for your theme */
         }
     </style>
 </head>
@@ -183,6 +111,25 @@
             <h2 class="section-title">About Me</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
             <img src="profile.jpg" alt="John Thomas Fallon" class="profile-picture">
+        </div>
+    </section>
+
+    <!-- Image Gallery Section -->
+    <section class="common-section image-gallery-section">
+        <div class="container">
+            <h2 class="section-title">Gallery</h2>
+            <div class="image-gallery">
+                <!-- Images from GitHub repository -->
+                <div><img src="Hudson Church.png" alt="Hudson Church" class="gallery-image"></div>
+                <div><img src="Palm Springs Juxt.jpg" alt="Palm Springs Juxtaposition" class="gallery-image"></div>
+                <div><img src="Pidgeon Chilgeon.jpg" alt="Pidgeon Chilgeon" class="gallery-image"></div>
+                <div><img src="SF Boats and Fog.png" alt="SF Boats and Fog" class="gallery-image"></div>
+                <div><img src="See Spot Run.png" alt="See Spot Run" class="gallery-image"></div>
+                <div><img src="Shapes and Shadows.jpg" alt="Shapes and Shadows" class="gallery-image"></div>
+                <div><img src="Smoke Break.png" alt="Smoke Break" class="gallery-image"></div>
+                <div><img src="Somewhere Out West.png" alt="Somewhere Out West" class="gallery-image"></div>
+                <!-- Add more images as needed -->
+            </div>
         </div>
     </section>
 
