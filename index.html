@@ -9,13 +9,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
-    <link rel="stylesheet" href="style.css">
     <style>
         /* Add custom CSS styles for square images */
         .slick-item {
             width: 200px; /* Set a fixed width for square images */
             height: 200px; /* Set a fixed height to maintain a 1x1 aspect ratio */
             margin: 0 auto;
+        }
+        /* Add custom styles for the image overlay */
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .slick-item:hover .image-overlay {
+            opacity: 1;
+        }
+        .image-overlay a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 24px;
+            transition: transform 0.3s ease;
+        }
+        .image-overlay a:hover {
+            transform: scale(1.2);
         }
     </style>
 </head>
@@ -35,15 +61,15 @@
                 <div class="slick-carousel">
                     <!-- Include all your images here with square dimensions -->
                     <div class="slick-item">
-                        <img src="Abstract Bridge Shapes.png" alt="Abstract Bridge Shapes">
+                        <img src="Abstract_Bridge_Shapes.jpg" alt="Abstract Bridge Shapes">
                         <div class="image-overlay">
-                            <a href="Abstract Bridge Shapes.png" class="image-zoom"><i class="fas fa-search-plus"></i></a>
+                            <a href="Abstract_Bridge_Shapes.jpg" class="image-zoom"><i class="fas fa-search-plus"></i></a>
                         </div>
                     </div>
                     <div class="slick-item">
-                        <img src="Abstract Lane.png" alt="Abstract Lane">
+                        <img src="Abstract_Lane.jpg" alt="Abstract Lane">
                         <div class="image-overlay">
-                            <a href="Abstract Lane.png" class="image-zoom"><i class="fas fa-search-plus"></i></a>
+                            <a href="Abstract_Lane.jpg" class="image-zoom"><i class="fas fa-search-plus"></i></a>
                         </div>
                     </div>
                     <!-- Add more images with similar markup -->
