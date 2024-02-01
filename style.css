@@ -1,5 +1,5 @@
 /* Reset default browser styles */
-body, h1, h2, p, ul, li {
+body, h1, h2, p, ul, li, a, img {
     margin: 0;
     padding: 0;
 }
@@ -8,6 +8,9 @@ body, h1, h2, p, ul, li {
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
 }
 
 .container {
@@ -41,11 +44,17 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
     font-weight: 700;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff9900; /* Accent color on hover */
 }
 
 main {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
 .main-image {
@@ -54,8 +63,9 @@ main {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 20px;
+    color: #333; /* Heading color */
 }
 
 /* Gallery styles */
@@ -75,7 +85,7 @@ h2 {
     transform: scale(1.1);
 }
 
-.thumbnail-image {
+.thumbnail img {
     max-width: 100%;
     height: auto;
     border: 1px solid #ddd;
