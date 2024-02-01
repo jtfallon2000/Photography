@@ -80,10 +80,14 @@
 
         .slick-item {
             width: 200px;
-            height: 200px; /* Square dimensions of at least 2x2 inches */
+            height: 200px; /* Set the square dimensions */
             margin: 0 auto;
-            background-size: cover;
-            background-position: center;
+        }
+
+        .slick-item img {
+            max-width: 100%;
+            height: 100%;
+            object-fit: cover;
             border-radius: 10px; /* Rounded corners for the images */
         }
 
@@ -158,27 +162,15 @@
             <div class="image-carousel">
                 <div class="slick-carousel">
                     <!-- Include all your images here -->
-                    <div class="slick-item" style="background-image: url('Abstract Zakim.png');"></div>
-                    <div class="slick-item" style="background-image: url('NYC Inbound.png');"></div>
-                    <div class="slick-item" style="background-image: url('Reflecting Pool.png');"></div>
-                    <div class="slick-item" style="background-image: url('Abstract Bridge Shapes.png');"></div>
-                    <div class="slick-item" style="background-image: url('Great Wave.png');"></div>
-                    <div class="slick-item" style="background-image: url('Selfie.png');"></div>
-                    <div class="slick-item" style="background-image: url('Old Man and Sea.png');"></div>
-                    <div class="slick-item" style="background-image: url('Melancholia.png');"></div>
-                    <div class="slick-item" style="background-image: url('Neighbors.png');"></div>
-                    <div class="slick-item" style="background-image: url('Hazy Boston.png');"></div>
-                    <div class="slick-item" style="background-image: url('Abstract Lane.png');"></div>
-                    <div class="slick-item" style="background-image: url('Abstract Window Shadows.png');"></div>
-                    <div class="slick-item" style="background-image: url('Midnight Terrain.png');"></div>
-                    <div class="slick-item" style="background-image: url('Mira View.png');"></div>
-                    <div class="slick-item" style="background-image: url('Yerba Buena Man.png');"></div>
-                    <div class="slick-item" style="background-image: url('Dog Activity.png');"></div>
-                    <div class="slick-item" style="background-image: url('Sweet Light.png');"></div>
-                    <div class="slick-item" style="background-image: url('Desert Nights.png');"></div>
-                    <div class="slick-item" style="background-image: url('PCH.png');"></div>
-                    <div class="slick-item" style="background-image: url('SF Campus View.png');"></div>
-                    <div class="slick-item" style="background-image: url('Bay Surf.png');"></div>
+                    <div class="slick-item">
+                        <img src="Abstract Zakim.png" alt="Abstract Zakim" width="200" height="200">
+                    </div>
+                    <div class="slick-item">
+                        <img src="NYC Inbound.png" alt="NYC Inbound" width="200" height="200">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Reflecting Pool.png" alt="Reflecting Pool" width="200" height="200">
+                    </div>
                     <!-- Add more images as needed -->
                 </div>
             </div>
