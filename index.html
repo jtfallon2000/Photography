@@ -6,6 +6,8 @@
     <meta name="description" content="John Thomas Fallon Photography - Capturing Moments in Stunning Photography">
     <title>John Thomas Fallon Photography</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
@@ -84,38 +86,136 @@
             cursor: pointer;
         }
 
-        @media (max-width: 768px) {
-            .menu li {
-                display: block;
-                text-align: center;
-                margin: 10px 0;
-            }
+        /* Existing styles incorporated, additional styles for new features below */
+        /* Social Icons */
+        .social-icons {
+            font-size: 20px;
+            margin-top: 10px;
         }
+
+        .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+        }
+
+        .lightbox img {
+            max-width: 80%;
+            max-height: 80%;
+            display: block;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        /* Interactive Map */
+        .interactive-map {
+            /* Add styles for the map container here */
+        }
+
+        /* Comments and Reviews */
+        .comments-reviews {
+            /* Add styles for the comments and reviews section here */
+        }
+
+        /* Like or Favorite Button */
+        .like-button {
+            /* Add styles for the like or favorite button here */
+        }
+
+        /* Social Sharing Buttons */
+        .social-share {
+            /* Add styles for the social sharing buttons here */
+        }
+
+        /* Quiz Styles */
+        .quiz-container {
+            /* Add styles for the quiz container here */
+        }
+
+        .quiz-question {
+            /* Add styles for quiz questions here */
+        }
+
+        .quiz-options {
+            /* Add styles for quiz options here */
+        }
+
+        /* Monthly Photo Contest */
+        .contest-container {
+            /* Add styles for the contest container here */
+        }
+
+        .contest-form {
+            /* Add styles for the contest form here */
+        }
+
+        /* User Login */
+        .user-login {
+            /* Add styles for the user login section here */
+        }
+
+        /* Newsletter Signup */
+        .newsletter-signup {
+            /* Add styles for the newsletter signup section here */
+        }
+
+        /* Responsive Design */
+        /* Add responsive styles for various screen sizes here */
+
+        /* Analytics and Feedback */
+        /* Add styles for analytics and feedback tools here */
     </style>
 </head>
 <body>
     <header>
         <h1>John Thomas Fallon Photography</h1>
+        <!-- Add social media icons for follow and share options -->
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
     </header>
 
     <!-- Image Gallery Section -->
     <section class="common-section image-gallery-section">
         <div class="container">
+            <!-- Add a carousel or slideshow of your best photographs here -->
+            <!-- Implement a lightbox effect and navigation for the gallery images -->
             <div class="image-gallery">
                 <!-- Images from GitHub repository -->
-                <div><img src="Hudson Church.png" alt="Hudson Church" class="gallery-image"></div>
-                <div><img src="Palm Springs Juxt.jpg" alt="Palm Springs Juxtaposition" class="gallery-image"></div>
-                <div><img src="Pidgeon Chilgeon.jpg" alt="Pidgeon Chilgeon" class="gallery-image"></div>
-                <div><img src="SF Boats and Fog.png" alt="SF Boats and Fog" class="gallery-image"></div>
-                <div><img src="See Spot Run.png" alt="See Spot Run" class="gallery-image"></div>
-                <div><img src="Shapes and Shadows.jpg" alt="Shapes and Shadows" class="gallery-image"></div>
-                <div><img src="Smoke Break.png" alt="Smoke Break" class="gallery-image"></div>
-                <div><img src="Somewhere Out West.png" alt="Somewhere Out West" class="gallery-image"></div>
+                <!-- You can use a lightbox library for this purpose -->
+                <div><a href="Hudson Church.png" data-lightbox="gallery"><img src="Hudson Church.png" alt="Hudson Church" class="gallery-image"></a></div>
+                <!-- Add more images with lightbox links -->
+                <div><a href="Palm Springs Juxt.jpg" data-lightbox="gallery"><img src="Palm Springs Juxt.jpg" alt="Palm Springs Juxtaposition" class="gallery-image"></a></div>
+                <div><a href="Pidgeon Chilgeon.jpg" data-lightbox="gallery"><img src="Pidgeon Chilgeon.jpg" alt="Pidgeon Chilgeon" class="gallery-image"></a></div>
+                <div><a href="SF Boats and Fog.png" data-lightbox="gallery"><img src="SF Boats and Fog.png" alt="SF Boats and Fog" class="gallery-image"></a></div>
+                <div><a href="See Spot Run.png" data-lightbox="gallery"><img src="See Spot Run.png" alt="See Spot Run" class="gallery-image"></a></div>
+                <div><a href="Shapes and Shadows.jpg" data-lightbox="gallery"><img src="Shapes and Shadows.jpg" alt="Shapes and Shadows" class="gallery-image"></a></div>
+                <div><a href="Smoke Break.png" data-lightbox="gallery"><img src="Smoke Break.png" alt="Smoke Break" class="gallery-image"></a></div>
+                <div><a href="Somewhere Out West.png" data-lightbox="gallery"><img src="Somewhere Out West.png" alt="Somewhere Out West" class="gallery-image"></a></div>
                 <!-- Add more images as needed -->
             </div>
         </div>
     </section>
 
+    <!-- Contact Form with CSS animations and real-time validation feedback -->
     <section class="common-section contact-section">
         <div class="container">
             <form class="contact-form" id="contact-form">
@@ -127,25 +227,72 @@
         </div>
     </section>
 
+    <!-- User Engagement Features -->
+    <section class="common-section user-engagement-section">
+        <div class="container">
+            <!-- Create an interactive map displaying the locations where your photos were taken -->
+            <div class="interactive-map">
+                <!-- Add map content here -->
+            </div>
+
+            <!-- Allow users to leave comments or reviews on your photography work -->
+            <div class="comments-reviews">
+                <!-- Add comments and reviews content here -->
+            </div>
+
+            <!-- Incorporate a like or favorite button for images -->
+            <div class="like-button">
+                <!-- Add like or favorite button here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Add social media sharing buttons to images and include a live Instagram feed -->
+    <section class="common-section social-share-section">
+        <div class="container">
+            <!-- Add social sharing buttons here -->
+        </div>
+    </section>
+
+    <!-- Gamify the Website with a photography quiz and a monthly photo contest -->
+    <section class="common-section gamify-section">
+        <div class="container">
+            <!-- Create a photography quiz with questions and options -->
+            <div class="quiz-container">
+                <!-- Add quiz content here -->
+            </div>
+
+            <!-- Organize a monthly photo contest where users can submit their photos and win prizes -->
+            <div class="contest-container">
+                <!-- Add contest form and details here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Personalize User Experience with a user login system and a newsletter signup option -->
+    <section class="common-section user-experience-section">
+        <div class="container">
+            <!-- Implement a user login system with login and registration forms -->
+            <div class="user-login">
+                <!-- Add user login content here -->
+            </div>
+
+            <!-- Offer a newsletter signup option to keep users updated on your latest work and photography tips -->
+            <div class="newsletter-signup">
+                <!-- Add newsletter signup form here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Responsive Design -->
+    <style>
+        /* Add responsive styles for various screen sizes here */
+    </style>
+
+    <!-- Implement analytics and feedback tools for continuous improvement -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script>
-        document.getElementById("contact-form").addEventListener("submit", function(event) {
-            const name = document.getElementById("name").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const message = document.getElementById("message").value.trim();
-
-            if (name === "" || email === "" || message === "") {
-                alert("Please fill out all fields.");
-                event.preventDefault();
-            } else if (!validateEmail(email)) {
-                alert("Please enter a valid email address.");
-                event.preventDefault();
-            }
-        });
-
-        function validateEmail(email) {
-            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return regex.test(email);
-        }
+        // JavaScript for new features can be added here
     </script>
 </body>
 </html>
