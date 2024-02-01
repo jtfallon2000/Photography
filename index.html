@@ -7,7 +7,8 @@
     <title>John Thomas Fallon Photography</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
@@ -66,33 +67,27 @@
             background-color: #555;
         }
 
-        /* Image Gallery Styles */
-        .image-gallery {
+        /* Image Carousel Styles */
+        .image-carousel {
+            text-align: center;
+        }
+
+        .owl-carousel {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .image-wrapper {
-            position: relative;
+            flex-wrap: nowrap;
             overflow: hidden;
-            width: 50%; /* Take up 50% of the page width */
-            max-height: 500px; /* Maximum height for images */
-            transition: transform 0.3s ease;
         }
 
-        .gallery-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            background-color: white; /* White background */
-            border-radius: 10px;
+        .owl-item {
+            width: 80%;
+            max-width: 300px;
+            margin: 0 auto;
         }
 
-        .gallery-image:hover {
-            transform: scale(1.1); /* Enlarge when hovered for 1 second */
+        .owl-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
         }
 
         /* White background for Lightbox */
@@ -127,12 +122,12 @@
                 padding: 8px 16px;
             }
 
-            .image-wrapper {
+            .owl-item {
                 width: 100%; /* Take up full width on smaller screens */
             }
 
-            .gallery-image {
-                border-radius: 5px;
+            .owl-carousel {
+                justify-content: center;
             }
 
             .social-icons {
@@ -160,36 +155,38 @@
         </div>
     </header>
 
-    <!-- Image Gallery Section -->
-    <section class="common-section image-gallery-section">
+    <!-- Image Carousel Section -->
+    <section class="common-section image-carousel-section">
         <div class="container">
-            <div class="image-gallery">
-                <!-- Include all your images here -->
-                <div class="image-wrapper">
-                    <a data-fancybox="image-gallery" href="Hudson Church.png"><img src="Hudson Church.png" alt="Hudson Church" class="gallery-image"></a>
+            <div class="image-carousel">
+                <div class="owl-carousel">
+                    <!-- Include all your images here -->
+                    <div class="owl-item">
+                        <img src="Hudson Church.png" alt="Hudson Church">
+                    </div>
+                    <div class="owl-item">
+                        <img src="Palm Springs Juxt.jpg" alt="Palm Springs Juxt">
+                    </div>
+                    <div class="owl-item">
+                        <img src="Pidgeon Chilgeon.jpg" alt="Pidgeon Chilgeon">
+                    </div>
+                    <div class="owl-item">
+                        <img src="SF Boats and Fog.png" alt="SF Boats and Fog">
+                    </div>
+                    <div class="owl-item">
+                        <img src="See Spot Run.png" alt="See Spot Run">
+                    </div>
+                    <div class="owl-item">
+                        <img src="Shapes and Shadows.jpg" alt="Shapes and Shadows">
+                    </div>
+                    <div class="owl-item">
+                        <img src="Smoke Break.png" alt="Smoke Break">
+                    </div>
+                    <div class="owl-item">
+                        <img src="Somewhere Out West.png" alt="Somewhere Out West">
+                    </div>
+                    <!-- Add more images as needed -->
                 </div>
-                <div class="image-wrapper">
-                    <a data-fancybox="image-gallery" href="Palm Springs Juxt.jpg"><img src="Palm Springs Juxt.jpg" alt="Palm Springs Juxt" class="gallery-image"></a>
-                </div>
-                <div class="image-wrapper">
-                    <a data-fancybox="image-gallery" href="Pidgeon Chilgeon.jpg"><img src="Pidgeon Chilgeon.jpg" alt="Pidgeon Chilgeon" class="gallery-image"></a>
-                </div>
-                <div class="image-wrapper">
-                    <a data-fancybox="image-gallery" href="SF Boats and Fog.png"><img src="SF Boats and Fog.png" alt="SF Boats and Fog" class="gallery-image"></a>
-                </div>
-                <div class="image-wrapper">
-                    <a data-fancybox="image-gallery" href="See Spot Run.png"><img src="See Spot Run.png" alt="See Spot Run" class="gallery-image"></a>
-                </div>
-                <div class="image-wrapper">
-                    <a data-fancybox="image-gallery" href="Shapes and Shadows.jpg"><img src="Shapes and Shadows.jpg" alt="Shapes and Shadows" class="gallery-image"></a>
-                </div>
-                <div class="image-wrapper">
-                    <a data-fancybox="image-gallery" href="Smoke Break.png"><img src="Smoke Break.png" alt="Smoke Break" class="gallery-image"></a>
-                </div>
-                <div class="image-wrapper">
-                    <a data-fancybox="image-gallery" href="Somewhere Out West.png"><img src="Somewhere Out West.png" alt="Somewhere Out West" class="gallery-image"></a>
-                </div>
-                <!-- Add more images as needed -->
             </div>
         </div>
     </section>
@@ -250,12 +247,12 @@
                 padding: 8px 16px;
             }
 
-            .image-wrapper {
+            .owl-item {
                 width: 100%; /* Take up full width on smaller screens */
             }
 
-            .gallery-image {
-                border-radius: 5px;
+            .owl-carousel {
+                justify-content: center;
             }
 
             .social-icons {
@@ -271,17 +268,27 @@
     </section>
 
     <!-- Implement analytics and feedback tools for continuous improvement -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('[data-fancybox="image-gallery"]').fancybox({
-                buttons: [
-                    "zoom",
-                    "slideShow",
-                    "thumbs",
-                    "close"
-                ],
-                loop: true
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                responsiveClass: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
             });
         });
     </script>
