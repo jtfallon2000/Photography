@@ -5,137 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="John Thomas Fallon Photography - Capturing Moments in Stunning Photography">
     <title>John Thomas Fallon Photography</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="favicon.png">
-    <style>
-        /* Add your custom CSS styles here */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-        header h1 {
-            font-size: 36px;
-            margin: 0;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: 700;
-        }
-
-        main {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .main-image {
-            max-width: 100%;
-            height: auto;
-        }
-
-        section#gallery {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        .image-row {
-            display: flex;
-            justify-content: center;
-        }
-
-        .thumbnail {
-            margin: 10px;
-            text-decoration: none;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .thumbnail:hover {
-            transform: scale(1.1);
-        }
-
-        .thumbnail-image {
-            max-width: 100%;
-            height: auto;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-        }
-    </style>
 </head>
 <body>
 
     <header>
-        <h1>John Thomas Fallon Photography</h1>
         <nav>
-            <ul>
-                <li><a href="#featured-photo">Featured</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="landscape.html">Landscape</a></li>
-                <li><a href="bw.html">Black & White</a></li>
-                <li><a href="street.html">Street</a></li>
-            </ul>
+            <div class="container">
+                <div class="logo">
+                    <h1>John Thomas Fallon Photography</h1>
+                </div>
+                <ul class="menu">
+                    <li><a href="#featured-photo">Featured</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="landscape.html">Landscape</a></li>
+                    <li><a href="bw.html">Black & White</a></li>
+                    <li><a href="street.html">Street</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
     <main>
         <section id="featured-photo">
-            <img src="SF Boats and Fog.png" alt="San Francisco Boats and Fog" class="main-image">
+            <div class="container">
+                <h2>Featured Photo</h2>
+                <img src="SF Boats and Fog.png" alt="San Francisco Boats and Fog" class="main-image">
+            </div>
         </section>
 
         <section id="gallery">
-            <h2>Gallery</h2>
-            <div class="image-row">
-                <a href="landscape.html" class="thumbnail">
-                    <img src="Somewhere Out West.png" alt="Landscape Photography" class="thumbnail-image">
-                </a>
-                <a href="bw.html" class="thumbnail">
-                    <img src="Hudson Church.png" alt="Black & White Photography" class="thumbnail-image">
-                </a>
-                <a href="street.html" class="thumbnail">
-                    <img src="Smoke Break.png" alt="Street Photography" class="thumbnail-image">
-                </a>
+            <div class="container">
+                <h2>Gallery</h2>
+                <div class="image-grid">
+                    <a href="landscape.html" class="thumbnail">
+                        <img src="Somewhere Out West.png" alt="Landscape Photography" class="thumbnail-image">
+                    </a>
+                    <a href="bw.html" class="thumbnail">
+                        <img src="Hudson Church.png" alt="Black & White Photography" class="thumbnail-image">
+                    </a>
+                    <a href="street.html" class="thumbnail">
+                        <img src="Smoke Break.png" alt="Street Photography" class="thumbnail-image">
+                    </a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 John Thomas Fallon Photography. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 John Thomas Fallon Photography. All rights reserved.</p>
+        </div>
     </footer>
 
 </body>
