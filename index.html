@@ -86,36 +86,42 @@
             cursor: pointer;
         }
 
-        /* Additional CSS for the requested changes */
-        /* Remove Facebook and Twitter icons */
-        .social-icons a i.fa-facebook, .social-icons a i.fa-twitter {
-            display: none;
+        /* Social Icons */
+        .social-icons {
+            font-size: 20px;
+            margin-top: 10px;
         }
 
-        /* Instagram icon now links to the Instagram account */
-        .social-icons a i.fa-instagram {
+        .social-icons a {
             color: #fff;
             margin: 0 10px;
             text-decoration: none;
         }
 
-        /* Add white background to images when clicked/enlarged */
-        .lightbox {
-            background-color: white;
+        /* Responsive Design */
+        /* Add responsive styles for various screen sizes here */
+        @media screen and (max-width: 768px) {
+            .common-section {
+                padding: 0 10px; /* Adjust padding for smaller screens */
+            }
         }
 
-        /* Hide the navigation arrows */
-        .lb-prev, .lb-next {
-            display: none;
+        /* Analytics and Feedback */
+        /* Add styles for analytics and feedback tools here */
+        .analytics-feedback {
+            background-color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            color: #333;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>John Thomas Fallon Photography</h1>
-        <!-- Updated social icons section -->
+        <!-- Add Instagram icon linked to the Instagram account -->
         <div class="social-icons">
-            <!-- Instagram icon now links to the Instagram account -->
             <a href="https://www.instagram.com/stuffitook"><i class="fab fa-instagram"></i></a>
         </div>
     </header>
@@ -130,7 +136,12 @@
     <!-- Contact Form with CSS animations and real-time validation feedback -->
     <section class="common-section contact-section">
         <div class="container">
-            <!-- ... (your existing contact form content) ... -->
+            <form class="contact-form" id="contact-form">
+                <input type="text" name="name" id="name" placeholder="Your Name" required>
+                <input type="email" name="email" id="email" placeholder="Your Email" required>
+                <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
     </section>
 
@@ -165,7 +176,34 @@
     <!-- Responsive Design -->
     <style>
         /* Add responsive styles for various screen sizes here */
+        @media screen and (max-width: 768px) {
+            .common-section {
+                padding: 0 10px; /* Adjust padding for smaller screens */
+            }
+
+            .contact-form input, .contact-form textarea {
+                padding: 8px;
+            }
+
+            .contact-form button {
+                padding: 8px 16px;
+            }
+
+            .gallery-image {
+                border-radius: 5px;
+            }
+
+            .social-icons {
+                font-size: 16px;
+            }
+        }
     </style>
+
+    <!-- Analytics and Feedback -->
+    <section class="analytics-feedback">
+        <!-- Add analytics and feedback content here -->
+        This is a placeholder for analytics and feedback tools.
+    </section>
 
     <!-- Implement analytics and feedback tools for continuous improvement -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
