@@ -68,8 +68,9 @@
 
         /* Image Gallery Styles */
         .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Square aspect ratio */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             gap: 20px;
             padding: 20px;
         }
@@ -77,8 +78,9 @@
         .image-wrapper {
             position: relative;
             overflow: hidden;
-            width: 250px; /* Set a fixed width */
-            height: 250px; /* Set a fixed height for 1x1 aspect ratio */
+            width: 50%; /* Take up 50% of the page width */
+            max-height: 500px; /* Maximum height for images */
+            transition: transform 0.3s ease;
         }
 
         .gallery-image {
@@ -87,12 +89,10 @@
             object-fit: cover;
             background-color: white; /* White background */
             border-radius: 10px;
-            transition: transform 0.3s ease;
         }
 
         .gallery-image:hover {
-            transform: scale(1.05);
-            cursor: pointer;
+            transform: scale(1.1); /* Enlarge when hovered for 1 second */
         }
 
         /* White background for Lightbox */
@@ -125,6 +125,10 @@
 
             .contact-form button {
                 padding: 8px 16px;
+            }
+
+            .image-wrapper {
+                width: 100%; /* Take up full width on smaller screens */
             }
 
             .gallery-image {
@@ -226,6 +230,10 @@
 
             .contact-form button {
                 padding: 8px 16px;
+            }
+
+            .image-wrapper {
+                width: 100%; /* Take up full width on smaller screens */
             }
 
             .gallery-image {
