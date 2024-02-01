@@ -5,11 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="John Thomas Fallon Photography - Capturing Moments in Stunning Photography">
     <title>John Thomas Fallon Photography</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
-        /* Existing styles... */
+        /* Importing Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        
+        /* Reset and body styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--bg-color, #fafafa);
+            color: var(--text-color, #333);
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
-        /* Responsive design */
+        /* Header styles */
+        header {
+            background-color: var(--header-bg-color, #333);
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        /* Section title styles */
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        /* Common section styles */
+        .about-section, .services-section, .contact-section, .testimonials-section, .blog-section {
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+
+        /* Profile picture styles */
+        .profile-picture {
+            max-width: 150px;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+        }
+
+        /* Service item styles */
+        .service-item {
+            margin-bottom: 20px;
+        }
+
+        /* Form input styles */
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* Button styles */
+        .contact-form button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Button hover state */
+        .contact-form button:hover {
+            background-color: #555;
+        }
+
+        /* Blog post styles */
+        .blog-post {
+            margin-bottom: 20px;
+        }
+
+        /* Blog image styles */
+        .blog-image {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        /* Responsive design for smaller screens */
         @media (max-width: 768px) {
             .menu li {
                 display: block;
@@ -22,117 +104,133 @@
             }
         }
 
-        /* Additional styles */
-        .about-section, .services-section, .contact-section, .testimonials-section, .blog-section {
-            margin-bottom: 40px;
+        /* Light/dark mode switch styles */
+        .theme-switch-wrapper {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1em;
+            justify-content: center; /* Center the switch */
         }
 
-        .profile-picture {
-            max-width: 150px;
-            border-radius: 50%;
-            margin: 20px 0;
+        .theme-switch {
+            display: inline-block;
+            height: 34px;
+            position: relative;
+            width: 60px;
         }
 
-        .service-item {
-            margin-bottom: 20px;
+        .theme-switch input {
+            display: none;
         }
 
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        .contact-form button {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
+        .slider {
+            background-color: #ccc;
+            bottom: 0;
             cursor: pointer;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: .4s;
         }
 
-        .contact-form button:hover {
-            background-color: #ff9900;
+        .slider:before {
+            background-color: #fff;
+            bottom: 4px;
+            content: "";
+            height: 26px;
+            left: 4px;
+            position: absolute;
+            transition: .4s;
+            width: 26px;
         }
 
-        .blog-post {
-            margin-bottom: 20px;
+        input:checked + .slider {
+            background-color: #66bb6a;
         }
 
-        .blog-image {
-            max-width: 100%;
-            height: auto;
-            margin: 20px 0;
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+        /* Light and dark color variables */
+        :root {
+            --bg-color: #fafafa;
+            --text-color: #333;
+            --header-bg-color: #333;
+            /* Add more variables as needed for your theme */
         }
     </style>
 </head>
 <body>
+    <header>
+        <!-- Add your logo or site title here -->
+        <h1>John Thomas Fallon Photography</h1>
+        <!-- Add navigation links if desired -->
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+                <!-- Add more menu items as needed -->
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Existing header and sections... -->
-
-    <section id="about-me" class="about-section container">
-        <h2 class="section-title">About Me</h2>
-        <img src="profile-picture.jpg" alt="John Thomas Fallon" class="profile-picture">
-        <p>John Thomas Fallon is a passionate photographer with over a decade of experience in capturing life's most precious moments. Specializing in portrait, event, and landscape photography, John's work is renowned for its depth, emotion, and stunning visual impact.</p>
-    </section>
-
-    <section id="services" class="services-section container">
-        <h2 class="section-title">Services</h2>
-        <div class="service-item">
-            <h3>Portrait Photography</h3>
-            <img src="portrait-service.jpg" alt="Portrait Photography" style="width:100%;max-width:300px;">
-            <p>Offering professional portrait sessions for individuals, families, and professionals.</p>
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <!-- Add your about me content here -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            <img src="profile.jpg" alt="John Thomas Fallon" class="profile-picture">
         </div>
-        <div class="service-item">
-            <h3>Event Photography</h3>
-            <img src="event-service.jpg" alt="Event Photography" style="width:100%;max-width:300px;">
-            <p>Capturing the essence of your special events and gatherings.</p>
+    </section>
+
+    <!-- Add more sections like services, contact, testimonials, and blog as needed -->
+
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <form class="contact-form" id="contact-form">
+                <!-- Add form fields for name, email, message, etc. -->
+                <input type="text" name="name" id="name" placeholder="Your Name" required>
+                <input type="email" name="email" id="email" placeholder="Your Email" required>
+                <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
-        <!-- Add more services as needed -->
     </section>
-
-    <section id="contact" class="contact-section container">
-        <h2 class="section-title">Contact</h2>
-        <form class="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="text" name="subject" placeholder="Subject" required>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </section>
-
-    <section id="testimonials" class="testimonials-section container">
-        <h2 class="section-title">Testimonials</h2>
-        <p>"John's photography skills are unmatched. Our wedding photos are absolutely stunning!" - Emily R.</p>
-        <!-- Add more testimonials as needed -->
-    </section>
-
-    <section id="blog" class="blog-section container">
-        <h2 class="section-title">Blog</h2>
-        <div class="blog-post">
-            <h3>5 Tips for Better Landscape Photos</h3>
-            <img src="blog-landscape-tips.jpg" alt="Landscape Photography Tips" class="blog-image">
-            <p>Discover essential techniques to enhance your landscape photography skills.</p>
-        </div>
-        <!-- Add more blog posts as needed -->
-    </section>
-
-    <!-- Existing footer... -->
 
     <script>
-        // Dynamic year for copyright
-        document.addEventListener('DOMContentLoaded', function() {
-            var year = new Date().getFullYear();
-            document.querySelector('footer p').textContent = `© ${year} John Thomas Fallon Photography. All rights reserved.`;
-        });
-        
-        // Light/dark mode switch logic
-        // Add a toggle button in your HTML and implement the switch here.
-    </script>
+        // JavaScript for form validation
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
 
+            if (name === "" || email === "" || message === "") {
+                alert("Please fill out all fields.");
+                event.preventDefault(); // Prevent form submission
+            } else if (!validateEmail(email)) {
+                alert("Please enter a valid email address.");
+                event.preventDefault(); // Prevent form submission
+            }
+        });
+
+        // Function to validate email format
+        function validateEmail(email) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
+    </script>
 </body>
 </html>
