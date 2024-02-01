@@ -7,208 +7,132 @@
     <title>John Thomas Fallon Photography</title>
     <link rel="icon" type="image/png" href="favicon.png">
     <style>
-        /* Reset default browser styles */
-        body, h1, h2, p, ul, li, a, img {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        /* Existing styles... */
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .menu li {
+                display: block;
+                text-align: center;
+                margin: 10px 0;
+            }
+
+            .image-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
         }
 
-        /* Global styles */
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f0f0f0;
-            font-size: 16px;
-            line-height: 1.6;
-            color: #333;
+        /* Additional styles */
+        .about-section, .services-section, .contact-section, .testimonials-section, .blog-section {
+            margin-bottom: 40px;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+        .profile-picture {
+            max-width: 150px;
+            border-radius: 50%;
+            margin: 20px 0;
         }
 
-        header {
+        .service-item {
+            margin-bottom: 20px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-form button {
             background-color: #333;
             color: #fff;
-            text-align: center;
-            padding: 20px 0;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
 
-        .logo h1 {
-            font-size: 36px;
-            margin: 0;
+        .contact-form button:hover {
+            background-color: #ff9900;
         }
 
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .menu {
-            list-style: none;
-        }
-
-        .menu li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        .menu a {
-            text-decoration: none;
-            color: #fff;
-            font-weight: 700;
-            transition: color 0.3s;
-        }
-
-        .menu a:hover {
-            color: #ff9900; /* Accent color on hover */
-        }
-
-        main {
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-        }
-
-        .section-title {
-            font-size: 28px;
+        .blog-post {
             margin-bottom: 20px;
-            color: #333; /* Heading color */
         }
 
-        /* Featured section */
-        .featured-section {
-            text-align: center;
-        }
-
-        .featured-image img {
+        .blog-image {
             max-width: 100%;
             height: auto;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .featured-image img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Gallery section */
-        .gallery-section {
-            text-align: center;
-        }
-
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            grid-gap: 20px;
-            justify-items: center;
-        }
-
-        .thumbnail {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-        }
-
-        .thumbnail img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .thumbnail:hover img {
-            transform: scale(1.05);
-        }
-
-        /* Apply filters to duplicated images */
-        .filter1 img {
-            filter: grayscale(100%);
-        }
-
-        .filter2 img {
-            filter: sepia(100%);
-        }
-
-        .filter3 img {
-            filter: hue-rotate(180deg);
-        }
-
-        /* Footer styles */
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="logo">
-                    <h1>John Thomas Fallon Photography</h1>
-                </div>
-                <ul class="menu">
-                    <li><a href="#featured-photo">Featured</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="landscape.html">Landscape</a></li>
-                    <li><a href="bw.html">Black & White</a></li>
-                    <li><a href="street.html">Street</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <!-- Existing header and sections... -->
 
-    <main>
-        <section id="featured-photo" class="featured-section">
-            <div class="container">
-                <h2 class="section-title">Featured Photo</h2>
-                <div class="featured-image">
-                    <img src="SF Boats and Fog.png" alt="San Francisco Boats and Fog">
-                </div>
-            </div>
-        </section>
+    <section id="about-me" class="about-section container">
+        <h2 class="section-title">About Me</h2>
+        <img src="profile-picture.jpg" alt="John Thomas Fallon" class="profile-picture">
+        <p>John Thomas Fallon is a passionate photographer with over a decade of experience in capturing life's most precious moments. Specializing in portrait, event, and landscape photography, John's work is renowned for its depth, emotion, and stunning visual impact.</p>
+    </section>
 
-        <section id="gallery" class="gallery-section">
-            <div class="container">
-                <h2 class="section-title">Gallery</h2>
-                <div class="image-grid">
-                    <!-- Duplicate images for a visually appealing layout -->
-                    <a href="landscape.html" class="thumbnail">
-                        <img src="Somewhere Out West.png" alt="Landscape Photography">
-                    </a>
-                    <a href="bw.html" class="thumbnail">
-                        <img src="Hudson Church.png" alt="Black & White Photography">
-                    </a>
-                    <a href="street.html" class="thumbnail">
-                        <img src="Smoke Break.png" alt="Street Photography">
-                    </a>
-                    <!-- Duplicated images with different filters -->
-                    <a href="landscape.html" class="thumbnail filter1">
-                        <img src="Somewhere Out West.png" alt="Landscape Photography">
-                    </a>
-                    <a href="bw.html" class="thumbnail filter2">
-                        <img src="Hudson Church.png" alt="Black & White Photography">
-                    </a>
-                    <a href="street.html" class="thumbnail filter3">
-                        <img src="Smoke Break.png" alt="Street Photography">
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 John Thomas Fallon Photography. All rights reserved.</p>
+    <section id="services" class="services-section container">
+        <h2 class="section-title">Services</h2>
+        <div class="service-item">
+            <h3>Portrait Photography</h3>
+            <img src="portrait-service.jpg" alt="Portrait Photography" style="width:100%;max-width:300px;">
+            <p>Offering professional portrait sessions for individuals, families, and professionals.</p>
         </div>
-    </footer>
+        <div class="service-item">
+            <h3>Event Photography</h3>
+            <img src="event-service.jpg" alt="Event Photography" style="width:100%;max-width:300px;">
+            <p>Capturing the essence of your special events and gatherings.</p>
+        </div>
+        <!-- Add more services as needed -->
+    </section>
+
+    <section id="contact" class="contact-section container">
+        <h2 class="section-title">Contact</h2>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <section id="testimonials" class="testimonials-section container">
+        <h2 class="section-title">Testimonials</h2>
+        <p>"John's photography skills are unmatched. Our wedding photos are absolutely stunning!" - Emily R.</p>
+        <!-- Add more testimonials as needed -->
+    </section>
+
+    <section id="blog" class="blog-section container">
+        <h2 class="section-title">Blog</h2>
+        <div class="blog-post">
+            <h3>5 Tips for Better Landscape Photos</h3>
+            <img src="blog-landscape-tips.jpg" alt="Landscape Photography Tips" class="blog-image">
+            <p>Discover essential techniques to enhance your landscape photography skills.</p>
+        </div>
+        <!-- Add more blog posts as needed -->
+    </section>
+
+    <!-- Existing footer... -->
+
+    <script>
+        // Dynamic year for copyright
+        document.addEventListener('DOMContentLoaded', function() {
+            var year = new Date().getFullYear();
+            document.querySelector('footer p').textContent = `© ${year} John Thomas Fallon Photography. All rights reserved.`;
+        });
+        
+        // Light/dark mode switch logic
+        // Add a toggle button in your HTML and implement the switch here.
+    </script>
 
 </body>
 </html>
