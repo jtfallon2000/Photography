@@ -7,8 +7,8 @@
     <title>John Thomas Fallon Photography</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
@@ -72,19 +72,19 @@
             text-align: center;
         }
 
-        .owl-carousel {
+        .slick-carousel {
             display: flex;
             flex-wrap: nowrap;
             overflow: hidden;
         }
 
-        .owl-item {
+        .slick-item {
             width: 80%;
             max-width: 300px;
             margin: 0 auto;
         }
 
-        .owl-item img {
+        .slick-item img {
             max-width: 100%;
             height: auto;
             border-radius: 50%;
@@ -122,11 +122,11 @@
                 padding: 8px 16px;
             }
 
-            .owl-item {
+            .slick-item {
                 width: 100%; /* Take up full width on smaller screens */
             }
 
-            .owl-carousel {
+            .slick-carousel {
                 justify-content: center;
             }
 
@@ -159,30 +159,30 @@
     <section class="common-section image-carousel-section">
         <div class="container">
             <div class="image-carousel">
-                <div class="owl-carousel">
+                <div class="slick-carousel">
                     <!-- Include all your images here -->
-                    <div class="owl-item">
+                    <div class="slick-item">
                         <img src="Hudson Church.png" alt="Hudson Church">
                     </div>
-                    <div class="owl-item">
+                    <div class="slick-item">
                         <img src="Palm Springs Juxt.jpg" alt="Palm Springs Juxt">
                     </div>
-                    <div class="owl-item">
+                    <div class="slick-item">
                         <img src="Pidgeon Chilgeon.jpg" alt="Pidgeon Chilgeon">
                     </div>
-                    <div class="owl-item">
+                    <div class="slick-item">
                         <img src="SF Boats and Fog.png" alt="SF Boats and Fog">
                     </div>
-                    <div class="owl-item">
+                    <div class="slick-item">
                         <img src="See Spot Run.png" alt="See Spot Run">
                     </div>
-                    <div class="owl-item">
+                    <div class="slick-item">
                         <img src="Shapes and Shadows.jpg" alt="Shapes and Shadows">
                     </div>
-                    <div class="owl-item">
+                    <div class="slick-item">
                         <img src="Smoke Break.png" alt="Smoke Break">
                     </div>
-                    <div class="owl-item">
+                    <div class="slick-item">
                         <img src="Somewhere Out West.png" alt="Somewhere Out West">
                     </div>
                     <!-- Add more images as needed -->
@@ -247,11 +247,11 @@
                 padding: 8px 16px;
             }
 
-            .owl-item {
+            .slick-item {
                 width: 100%; /* Take up full width on smaller screens */
             }
 
-            .owl-carousel {
+            .slick-carousel {
                 justify-content: center;
             }
 
@@ -267,28 +267,24 @@
         This is a placeholder for analytics and feedback tools.
     </section>
 
-    <!-- Implement analytics and feedback tools for continuous improvement -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Initialize Slick Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
         $(document).ready(function() {
-            $('.owl-carousel').owlCarousel({
-                loop: true,
-                margin: 10,
-                responsiveClass: true,
-                autoplay: true,
-                autoplayTimeout: 3000,
-                autoplayHoverPause: true,
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: 3
-                    },
-                    1000: {
-                        items: 5
+            $('.slick-carousel').slick({
+                centerMode: true,
+                centerPadding: '0',
+                slidesToShow: 3,
+                dots: true,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            centerMode: false,
+                            slidesToShow: 1
+                        }
                     }
-                }
+                ]
             });
         });
     </script>
