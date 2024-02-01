@@ -24,6 +24,30 @@ header h1 {
     font-size: 2rem;
 }
 
+nav ul {
+    list-style: none;
+    text-align: center;
+    background-color: #222;
+    padding: 0.5rem 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff6600; /* Highlight color on hover */
+}
+
 main {
     max-width: 1200px;
     margin: 2rem auto;
@@ -37,14 +61,23 @@ main {
     display: block;
     margin-bottom: 2rem;
     border-radius: 5px; /* Add rounded corners to images */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Gallery section */
+#gallery {
+    text-align: center;
+}
+
+#gallery h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
 .image-row {
     display: flex;
     flex-wrap: wrap; /* Ensure thumbnails wrap to the next row on smaller screens */
-    margin-bottom: 2rem;
+    justify-content: center;
 }
 
 .thumbnail {
@@ -63,7 +96,7 @@ main {
 
 .thumbnail:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .thumbnail-image {
@@ -84,11 +117,4 @@ footer {
 /* Footer text */
 footer p {
     font-size: 0.8rem;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .thumbnail {
-        flex-basis: calc(50% - 1rem);
-    }
 }
