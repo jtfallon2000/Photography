@@ -84,12 +84,9 @@
         /* Updated styles for the image carousel */
         .image-carousel {
             text-align: center;
-        }
-
-        .slick-carousel {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-between;
         }
 
         .slick-item {
@@ -97,20 +94,17 @@
             margin: 10px;
             overflow: hidden;
             position: relative;
+            padding-top: calc(33.33% - 20px);
         }
 
         .slick-item img {
+            position: absolute;
             width: 100%;
-            height: auto;
+            height: 100%;
             object-fit: cover;
+            top: 0;
+            left: 0;
             border-radius: 10px;
-        }
-
-        /* Ensure 1x1 aspect ratio for images */
-        .slick-item::before {
-            content: "";
-            display: block;
-            padding-top: 100%; /* 1:1 Aspect Ratio */
         }
 
         /* White background for Lightbox */
