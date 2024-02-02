@@ -84,29 +84,22 @@
         /* Updated styles for the image carousel */
         .image-carousel {
             text-align: center;
-            overflow-x: auto;
         }
 
         .slick-carousel {
             display: flex;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .slick-item {
-            flex: 0 0 auto;
-            width: 300px; /* Set a fixed width */
-            height: 300px; /* Set a fixed height to maintain a 1x1 aspect ratio */
-            margin-right: 10px; /* Add some spacing between images */
-        }
-
-        .slick-item:last-child {
-            margin-right: 0; /* Remove margin for the last image */
+            flex: 0 0 calc(33.33% - 20px);
+            margin: 10px;
         }
 
         .slick-item img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
             border-radius: 10px; /* Rounded corners for the images */
         }
 
@@ -226,6 +219,12 @@
                         <img src="PCH.png" alt="PCH">
                     </div>
                     <div class="slick-item">
+                        <img src="Palm Springs Juxt.jpg" alt="Palm Springs Juxt">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Pidgeon Chilgeon.jpg" alt="Pidgeon Chilgeon">
+                    </div>
+                    <div class="slick-item">
                         <img src="Reflecting Pool.png" alt="Reflecting Pool">
                     </div>
                     <div class="slick-item">
@@ -332,7 +331,7 @@
     <script>
         $(document).ready(function() {
             $('.slick-carousel').slick({
-                centerMode: true,
+                centerMode: false,
                 centerPadding: '0',
                 slidesToShow: 3,
                 dots: true,
