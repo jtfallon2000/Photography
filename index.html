@@ -10,7 +10,77 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <style>
-        /* ... (existing styles) ... */
+        /* Your existing styles */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: var(--bg-color, #fafafa);
+            color: var(--text-color, #333);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--header-bg-color, #333);
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .common-section {
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+
+        .profile-picture {
+            max-width: 150px;
+            border-radius: 50%;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            text-align: center;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-form button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #555;
+        }
 
         /* Updated styles for the image grid */
         .image-grid {
@@ -21,20 +91,10 @@
             margin: 0 auto;
         }
 
-        .image-item {
-            position: relative;
-            overflow: hidden;
-            padding-top: 100%; /* 1x1 aspect ratio */
-        }
-
-        .image-item img {
-            position: absolute;
+        .image-grid img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
         }
-
-        /* ... (existing styles) ... */
     </style>
 </head>
 <body>
@@ -51,119 +111,35 @@
         <div class="container">
             <div class="image-grid">
                 <!-- Include all your images here with 1x1 aspect ratio -->
-                <!-- Image 1 -->
-                <div class="image-item">
-                    <img src="images/Abstract Bridge Shapes.png" alt="Abstract Bridge Shapes">
-                </div>
-                <!-- Image 2 -->
-                <div class="image-item">
-                    <img src="images/Abstract Lane.png" alt="Abstract Lane">
-                </div>
-                <!-- Image 3 -->
-                <div class="image-item">
-                    <img src="images/Abstract Window Shadows.png" alt="Abstract Window Shadows">
-                </div>
-                <!-- Image 4 -->
-                <div class="image-item">
-                    <img src="images/Abstract Zakim.png" alt="Abstract Zakim">
-                </div>
-                <!-- Continue adding more images as needed -->
-                <!-- Image 5 -->
-                <div class="image-item">
-                    <img src="images/Bay Surf.png" alt="Bay Surf">
-                </div>
-                <!-- Image 6 -->
-                <div class="image-item">
-                    <img src="images/Desert Nights.png" alt="Desert Nights">
-                </div>
-                <!-- Image 7 -->
-                <div class="image-item">
-                    <img src="images/Dog Activity.png" alt="Dog Activity">
-                </div>
-                <!-- Image 8 -->
-                <div class="image-item">
-                    <img src="images/Great Wave.png" alt="Great Wave">
-                </div>
-                <!-- Image 9 -->
-                <div class="image-item">
-                    <img src="images/Hazy Boston.png" alt="Hazy Boston">
-                </div>
-                <!-- Image 10 -->
-                <div class="image-item">
-                    <img src="images/Hudson Church.png" alt="Hudson Church">
-                </div>
-                <!-- Image 11 -->
-                <div class="image-item">
-                    <img src="images/Melancholia.png" alt="Melancholia">
-                </div>
-                <!-- Image 12 -->
-                <div class="image-item">
-                    <img src="images/Midnight Terrain.png" alt="Midnight Terrain">
-                </div>
-                <!-- Image 13 -->
-                <div class="image-item">
-                    <img src="images/Mira View.png" alt="Mira View">
-                </div>
-                <!-- Image 14 -->
-                <div class="image-item">
-                    <img src="images/NYC Inbound.png" alt="NYC Inbound">
-                </div>
-                <!-- Image 15 -->
-                <div class="image-item">
-                    <img src="images/Neighbors.png" alt="Neighbors">
-                </div>
-                <!-- Image 16 -->
-                <div class="image-item">
-                    <img src="images/Old Man and Sea.png" alt="Old Man and Sea">
-                </div>
-                <!-- Image 17 -->
-                <div class="image-item">
-                    <img src="images/PCH.png" alt="PCH">
-                </div>
-                <!-- Image 18 -->
-                <div class="image-item">
-                    <img src="images/Palm Springs Juxt.jpg" alt="Palm Springs Juxt">
-                </div>
-                <!-- Image 19 -->
-                <div class="image-item">
-                    <img src="images/Pidgeon Chilgeon.jpg" alt="Pidgeon Chilgeon">
-                </div>
-                <!-- Image 20 -->
-                <div class="image-item">
-                    <img src="images/Reflecting Pool.png" alt="Reflecting Pool">
-                </div>
-                <!-- Image 21 -->
-                <div class="image-item">
-                    <img src="images/SF Boats and Fog.png" alt="SF Boats and Fog">
-                </div>
-                <!-- Image 22 -->
-                <div class="image-item">
-                    <img src="images/SF Campus View.png" alt="SF Campus View">
-                </div>
-                <!-- Image 23 -->
-                <div class="image-item">
-                    <img src="images/See Spot Run.png" alt="See Spot Run">
-                </div>
-                <!-- Image 24 -->
-                <div class="image-item">
-                    <img src="images/Selfie.png" alt="Selfie">
-                </div>
-                <!-- Image 25 -->
-                <div class="image-item">
-                    <img src="images/Shapes and Shadows.jpg" alt="Shapes and Shadows">
-                </div>
-                <!-- Image 26 -->
-                <div class="image-item">
-                    <img src="images/Smoke Break.png" alt="Smoke Break">
-                </div>
-                <!-- Image 27 -->
-                <div class="image-item">
-                    <img src="images/Somewhere Out West.png" alt="Somewhere Out West">
-                </div>
-                <!-- Image 28 -->
-                <div class="image-item">
-                    <img src="images/Sweet Light.png" alt="Sweet Light">
-                </div>
+                <img src="images/Abstract Bridge Shapes.png" alt="Abstract Bridge Shapes">
+                <img src="images/Abstract Lane.png" alt="Abstract Lane">
+                <img src="images/Abstract Window Shadows.png" alt="Abstract Window Shadows">
+                <img src="images/Abstract Zakim.png" alt="Abstract Zakim">
+                <img src="images/Bay Surf.png" alt="Bay Surf">
+                <img src="images/Desert Nights.png" alt="Desert Nights">
+                <img src="images/Dog Activity.png" alt="Dog Activity">
+                <img src="images/Great Wave.png" alt="Great Wave">
+                <img src="images/Hazy Boston.png" alt="Hazy Boston">
+                <img src="images/Hudson Church.png" alt="Hudson Church">
+                <img src="images/Melancholia.png" alt="Melancholia">
+                <img src="images/Midnight Terrain.png" alt="Midnight Terrain">
+                <img src="images/Mira View.png" alt="Mira View">
+                <img src="images/NYC Inbound.png" alt="NYC Inbound">
+                <img src="images/Neighbors.png" alt="Neighbors">
+                <img src="images/Old Man and Sea.png" alt="Old Man and Sea">
+                <img src="images/PCH.png" alt="PCH">
+                <img src="images/Palm Springs Juxt.jpg" alt="Palm Springs Juxt">
+                <img src="images/Pidgeon Chilgeon.jpg" alt="Pidgeon Chilgeon">
+                <img src="images/Reflecting Pool.png" alt="Reflecting Pool">
+                <img src="images/SF Boats and Fog.png" alt="SF Boats and Fog">
+                <img src="images/SF Campus View.png" alt="SF Campus View">
+                <img src="images/See Spot Run.png" alt="See Spot Run">
+                <img src="images/Selfie.png" alt="Selfie">
+                <img src="images/Shapes and Shadows.jpg" alt="Shapes and Shadows">
+                <img src="images/Smoke Break.png" alt="Smoke Break">
+                <img src="images/Somewhere Out West.png" alt="Somewhere Out West">
+                <img src="images/Sweet Light.png" alt="Sweet Light">
+                <!-- Add more images as needed -->
             </div>
         </div>
     </section>
