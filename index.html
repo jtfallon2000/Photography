@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="John Thomas Fallon Photography - Capturing Moments in Stunning Photography">
     <title>John Thomas Fallon Photography</title>
-    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
@@ -81,138 +81,122 @@
             background-color: #555;
         }
 
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+        /* Updated styles for the image carousel */
+        .image-carousel {
+            text-align: center;
+            overflow-x: auto;
         }
 
-        .image-grid .image-item {
+        .slick-carousel {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .slick-item {
+            flex: 0 0 auto;
+            width: 300px; /* Set a fixed width */
+            height: 300px; /* Set a fixed height to maintain a 1x1 aspect ratio */
+            margin-right: 10px; /* Add some spacing between images */
+        }
+
+        .slick-item:last-child {
+            margin-right: 0; /* Remove margin for the last image */
+        }
+
+        .slick-item img {
             width: 100%;
-            height: auto;
-            overflow: hidden;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px; /* Rounded corners for the images */
         }
 
-        .image-grid img {
-            width: 100%;
-            height: auto;
-            display: block; /* Ensure images are block-level to remove bottom space */
+        /* White background for Lightbox */
+        .lb-backdrop, .lb-dataContainer {
+            background-color: white !important; /* White background with !important to override Lightbox styles */
         }
 
-        /* Add additional styles or overwrite the existing ones here. */
-        /* For a professional look, consider styles for hover effects, 
-           transitions, navigation menus, and footer. */
+        /* Social Icons */
+        .social-icons {
+            font-size: 20px;
+            margin-top: 10px;
+        }
 
+        .social-icons a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        /* Responsive Design */
+        /* Add responsive styles for various screen sizes here */
+        @media screen and (max-width: 768px) {
+            .common-section {
+                padding: 0 10px; /* Adjust padding for smaller screens */
+            }
+
+            .contact-form {
+                max-width: 100%;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                padding: 8px;
+            }
+
+            .contact-form button {
+                padding: 8px 16px;
+            }
+        }
+
+        /* Analytics and Feedback */
+        /* Add styles for analytics and feedback tools here */
+        .analytics-feedback {
+            background-color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>John Thomas Fallon Photography</h1>
+        <!-- Add Instagram icon linked to the Instagram account -->
         <div class="social-icons">
             <a href="https://www.instagram.com/stuffitook"><i class="fab fa-instagram"></i></a>
         </div>
     </header>
 
-    <!-- Image Grid Section -->
-    <section class="common-section image-grid-section">
+    <!-- Image Carousel Section -->
+    <section class="common-section image-carousel-section">
         <div class="container">
-            <div class="image-grid">
-                <!-- Include all your images here with 1x1 aspect ratio -->
-                <!-- Repeat this block for each image, ensure the src matches the file name exactly -->
-                <div class="image-item">
-                    <img src="Abstract Bridge Shapes.png" alt="Abstract Bridge Shapes">
+            <div class="image-carousel">
+                <div class="slick-carousel">
+                    <!-- Include all your images here -->
+                    <div class="slick-item">
+                        <img src="Abstract Bridge Shapes.png" alt="Abstract Bridge Shapes">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Abstract Lane.png" alt="Abstract Lane">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Abstract Window Shadows.png" alt="Abstract Window Shadows">
+                    </div>
+                    <!-- Add more images as needed -->
+                    <!-- Continue adding your images here -->
+                    <!-- Example: -->
+                    <div class="slick-item">
+                        <img src="Abstract Zakim.png" alt="Abstract Zakim">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Bay Surf.png" alt="Bay Surf">
+                    </div>
+                    <div class="slick-item">
+                        <img src="Desert Nights.png" alt="Desert Nights">
+                    </div>
+                    <!-- Add all your images here -->
                 </div>
-                <!-- The rest of the images are included in the same format as above -->
-                <!-- Ensure you close each div appropriately and follow the same pattern -->
-                <!-- ... -->
-                <!-- The divs below are placeholders, replace them with actual image divs -->
-                <div class="image-item">
-                    <img src="Abstract Lane.png" alt="Abstract
-
-                <div class="image-item">
-                    <img src="images/Abstract Lane.png" alt="Abstract Lane">
-                </div>
-                <div class="image-item">
-                    <img src="images/Abstract Window Shadows.png" alt="Abstract Window Shadows">
-                </div>
-                <div class="image-item">
-                    <img src="images/Abstract Zakim.png" alt="Abstract Zakim">
-                </div>
-                <div class="image-item">
-                    <img src="images/Bay Surf.png" alt="Bay Surf">
-                </div>
-                <div class="image-item">
-                    <img src="images/Desert Nights.png" alt="Desert Nights">
-                </div>
-                <div class="image-item">
-                    <img src="images/Dog Activity.png" alt="Dog Activity">
-                </div>
-                <div class="image-item">
-                    <img src="images/Great Wave.png" alt="Great Wave">
-                </div>
-                <div class="image-item">
-                    <img src="images/Hazy Boston.png" alt="Hazy Boston">
-                </div>
-                <div class="image-item">
-                    <img src="images/Hudson Church.png" alt="Hudson Church">
-                </div>
-                <div class="image-item">
-                    <img src="images/Melancholia.png" alt="Melancholia">
-                </div>
-                <div class="image-item">
-                    <img src="images/Midnight Terrain.png" alt="Midnight Terrain">
-                </div>
-                <div class="image-item">
-                    <img src="images/Mira View.png" alt="Mira View">
-                </div>
-                <div class="image-item">
-                    <img src="images/NYC Inbound.png" alt="NYC Inbound">
-                </div>
-                <div class="image-item">
-                    <img src="images/Neighbors.png" alt="Neighbors">
-                </div>
-                <div class="image-item">
-                    <img src="images/Old Man and Sea.png" alt="Old Man and Sea">
-                </div>
-                <div class="image-item">
-                    <img src="images/PCH.png" alt="PCH">
-                </div>
-                <div class="image-item">
-                    <img src="images/Palm Springs Juxt.jpg" alt="Palm Springs Juxt">
-                </div>
-                <div class="image-item">
-                    <img src="images/Pidgeon Chilgeon.jpg" alt="Pidgeon Chilgeon">
-                </div>
-                <div class="image-item">
-                    <img src="images/Reflecting Pool.png" alt="Reflecting Pool">
-                </div>
-                <div class="image-item">
-                    <img src="images/SF Boats and Fog.png" alt="SF Boats and Fog">
-                </div>
-                <div class="image-item">
-                    <img src="images/SF Campus View.png" alt="SF Campus View">
-                </div>
-                <div class="image-item">
-                    <img src="images/See Spot Run.png" alt="See Spot Run">
-                </div>
-                <div class="image-item">
-                    <img src="images/Selfie.png" alt="Selfie">
-                </div>
-                <div class="image-item">
-                    <img src="images/Shapes and Shadows.jpg" alt="Shapes and Shadows">
-                </div>
-                <div class="image-item">
-                    <img src="images/Smoke Break.png" alt="Smoke Break">
-                </div>
-                <div class="image-item">
-                    <img src="images/Somewhere Out West.png" alt="Somewhere Out West">
-                </div>
-                <div class="image-item">
-                    <img src="images/Sweet Light.png" alt="Sweet Light">
-                </div>
-                <!-- Add more images as needed -->
             </div>
         </div>
     </section>
@@ -258,6 +242,29 @@
         </div>
     </section>
 
+    <!-- Responsive Design -->
+    <style>
+        /* Add responsive styles for various screen sizes here */
+        @media screen and (max-width: 768px) {
+            .common-section {
+                padding: 0 10px; /* Adjust padding for smaller screens */
+            }
+
+            .contact-form {
+                max-width: 100%;
+            }
+
+            .contact-form input,
+            .contact-form textarea {
+                padding: 8px;
+            }
+
+            .contact-form button {
+                padding: 8px 16px;
+            }
+        }
+    </style>
+
     <!-- Analytics and Feedback -->
     <section class="analytics-feedback">
         <!-- Add analytics and feedback content here -->
@@ -269,7 +276,7 @@
     <script>
         $(document).ready(function() {
             $('.slick-carousel').slick({
-                centerMode: false,
+                centerMode: true,
                 centerPadding: '0',
                 slidesToShow: 3,
                 dots: true,
